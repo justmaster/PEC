@@ -19,16 +19,6 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const theme = {
-  size: {
-    xs: 320,
-    s: 370,
-    m: 768,
-    l: 1280,
-    xl: 1680
-  }
-};
-
 export const Home = () => {
   const history = useHistory();
   const { id } = useParams();

@@ -24,7 +24,7 @@ export const Footer = () => {
               fontSize: "15px"
             }}
           >
-            designed & built by Ral Mayer
+            All rights reserved
           </p>
         </PaddedContainer>
       </Wrapper>

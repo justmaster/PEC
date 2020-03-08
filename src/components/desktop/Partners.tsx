@@ -12,7 +12,6 @@ import {
   Dash,
   Subheading,
   Paragraph,
-  WhiteSpace
 } from "./desktop_styles/Components";
 import { useParams } from "react-router-dom";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";

@@ -14,7 +14,7 @@ import {
   PaddedContainer,
   Btn
 } from "./desktop_styles/Components";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import PersonPinCircleIcon from "@material-ui/icons/PersonPinCircle";
 
 const dummyParagraph =
@@ -22,7 +22,6 @@ const dummyParagraph =
 
 export const About = () => {
   const { id } = useParams();
-  const history = useHistory()
   const [heading, subheading, paragraph, button] =
     id === "en"
       ? ["ABOUT US", "Lorem Ipsum", dummyParagraph, "All Products"]

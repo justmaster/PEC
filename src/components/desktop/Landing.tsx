@@ -11,8 +11,6 @@ import {
   HeaderElement,
   Body,
   BodyElement,
-  Footer,
-  FooterElement,
   Achievments,
   LanguageSelect,
   DesktopNav
