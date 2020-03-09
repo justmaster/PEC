@@ -27,8 +27,6 @@ import { Burger } from "../Menu/Burger";
 import { Menu } from "../Menu/Menu";
 
 const dummyHeading = "PETRO ENERGY CASPIAN EAST";
-const dummyParagraph =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 const dummyParagraph_ir =
   "شما چه لعنتی فقط لعنتی در مورد من گفتی ، ای کوچولو می دانم که من کلاس برتر من را در مأموریت های نیروی دریایی فارغ التحصیل شده ام ، و من در حملات پنهانی متعددی به القوائد درگیر شده ام ، و بیش از 300 مورد قتل تایید شده دارم. من در جنگ گوریل آموزش دیده ام و بهترین تک تیرانداز در کل نیروهای مسلح ایالات متحده هستم.";
 
@@ -53,14 +51,38 @@ const settings = {
 };
 
 const displays = [
-  { title: "WHY ARE WE STILLE HERE", text: dummyParagraph },
-  { title: "JUST TO SUFFER?", text: dummyParagraph },
-  { title: "EVERY NIGHT I CAN FEEL MY LEGS", text: dummyParagraph }
+  {
+    title: "HISTORY OF EXCELLENCE",
+    text:
+      "Since the vety establishment of the company in 2001, Petro Energy Caspian East has established ourselves as one of the most perforative and reliable companies in the industry and has been pushing the plank of excellence to this very day. With our experienced staff and time-tested operations, we're looking forward to future challenges and ways to help your business grow."
+  },
+  {
+    title: "TAX FREE",
+    text:
+      "With majority of our operations concentrated within Sarakhs Free Economic Zone, we're able to provide the best possible rates the market has to offer, all thanks to the fact that there's no tax to be paid on the oil and gas we produce."
+  },
+  {
+    title: "UNIQUE STATUS",
+    text:
+      "PEC East is a Georgian company, which makes it exempt from the international sanctions and allows a much greater degree of stability. In times of crisis and turmoil, you can always be sure that our operations will remain as reliable as ever."
+  }
 ];
 const displays_ir = [
-  { title: "چرا ما هنوز اینجا هستیم؟", text: dummyParagraph_ir },
-  { title: "فقط برای رنج؟", text: dummyParagraph_ir },
-  { title: "من دیو هستم", text: dummyParagraph_ir }
+  {
+    title: "تاریخ تعالی",
+    text:
+      "وی ادامه داد: از زمان تأسیس وتی این شرکت در سال 2001 ، پترو انرژی کاسپین شرقی خود را به عنوان یکی از شرکتهای برتر و معتبر در صنعت مستقر کرده است و تا به امروز با تلاش و مجرب خود ما را به سمت تابلوی تعالی سوق داده است. عملیات آزمایش شده ، ما مشتاقانه منتظر چالش های آینده و راه های کمک به رشد کسب و کار شما هستیم. "
+  },
+  {
+    title: "بدون مالیات",
+    text:
+      "با اکثر فعالیتهای ما در منطقه آزاد اقتصادی سرخس متمرکز شده است ، ما می توانیم بهترین نرخ ممکن بازار را ارائه دهیم ، همه این به لطف این است که هیچ گونه مالیاتی برای نفت و گاز تولیدی ما پرداخت نمی شود. "
+  },
+  {
+    title: "وضعیت منحصر به فرد",
+    text:
+      "PEC East یک شرکت جورجیایی است که باعث می شود از تحریم های بین المللی معاف شود و درجه ثبات بسیار بیشتری را فراهم می کند. در مواقع بحران و آشفتگی ، شما همیشه می توانید مطمئن باشید که عملیات ما مانند همیشه قابل اعتماد خواهد بود."
+  }
 ];
 
 export const Landing = () => {
@@ -94,7 +116,10 @@ export const Landing = () => {
             <HeaderElement>
               <img src={require("../../assets/logo.png")} alt="logo" />
             </HeaderElement>
-            <HeaderElement className="left">
+            <HeaderElement
+              className="left"
+              style={{ justifyContent: "flex-end" }}
+            >
               <LanguageSelect
                 className={id !== "en" ? "active" : "disabled"}
                 onClick={handleClick}
@@ -125,8 +150,8 @@ export const Landing = () => {
                           {title}
                         </Subheading>
                       </PaddedContainer>
-                      <PaddedContainer>
-                        <Paragraph>{text}</Paragraph>
+                      <PaddedContainer className={`landing ${id === "en" ? "" : "fa"}`}>
+                        <Paragraph className={`landing ${id === "en" ? "" : "fa"}`}>{text}</Paragraph>
                       </PaddedContainer>
                     </div>
                   ))}

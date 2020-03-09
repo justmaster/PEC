@@ -47,6 +47,10 @@ export const Btn = styled.div`
       transform: scale(1, 1);
     }
   }
+
+  @media (max-width: 780px) {
+    width: 80%;
+  }
 `;
 
 export const WhiteSpace = styled.div`
@@ -115,7 +119,7 @@ export const Subheading = styled.h3`
 
   @media (max-width: 1500px) {
     &.landing {
-      font-size: 20px;
+      font-size: 25px;
     }
   }
 `;
@@ -131,6 +135,9 @@ export const Subsubheading = styled.h4`
   &.bgDark {
     color: white;
   }
+  @media (max-width: 780px) {
+    text-align: center;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -140,21 +147,19 @@ export const Paragraph = styled.p`
   width: 70%;
   color: #bdbdbd;
   // background: orange;
-
+  &.fa {
+    font-size: 20px;
+  }
   &.bgDark {
     color: white;
   }
-
   &.bgBright {
     color: black;
   }
-
   &.foot {
     width: 100%;
   }
-
   &.fillerParagraph{}
-
   @media (max-width: 1500px) {
     width: 90%;
   }
@@ -162,6 +167,10 @@ export const Paragraph = styled.p`
     &.fillerParagraph{
       display: none;
     }
+    &.landing {
+      color: white;
+    }
+    text-align: center;
   }
 `;
 
@@ -170,20 +179,21 @@ export const PaddedContainer = styled.div`
   height: auto;
   padding: 20px 0 20px 0;
   // background: pink;
-
   &.footer {
     text-align: center;
   }
-
   &.about {}
-
   &.contacts{}
-
   @media (max-width: 1500px) {
     width: 100%;
   }
-
   @media (max-width: 780px) {
     display: flex;
     justify-content: center;
+    &.landing {
+      min-height: 150px;
+    }
+    &.fa {
+      min-height: 180px;
+    }
 `;

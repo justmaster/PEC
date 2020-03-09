@@ -124,7 +124,7 @@ export const Products = () => {
                       </g>
                     </svg>
                     <a href={certificate} target="_blank">
-                      <Btn className="bgBright">
+                      <Btn className="bgBright" style={{width: "50%"}}>
                         {button}
                       </Btn>
                     </a>
