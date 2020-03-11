@@ -17,15 +17,22 @@ import {
 import { useParams } from "react-router-dom";
 import PersonPinCircleIcon from "@material-ui/icons/PersonPinCircle";
 
-const dummyParagraph =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-
 export const About = () => {
   const { id } = useParams();
   const [heading, subheading, paragraph, button] =
     id === "en"
-      ? ["ABOUT US", "Lorem Ipsum", dummyParagraph, "All Products"]
-      : ["درباره ما", "Lorem Ipsum", dummyParagraph, "همه محصولات"];
+      ? [
+          "ABOUT US",
+          "Brief History",
+          "PEC East was established by a team of experienced engineers from Georgia, Ukraine and Russia, in 2001. When we first came to Iran, we've recognized the incredible potential of Persian petrochemical industry and made it our goal to explore it to it's fullest. Nowadays we've become one of the biggest performers in the market in terms of quality & reliability. Thanks to our special status, our operations and products are exempt from international sanctions & are 0% tax, which means that you can trust us with delivering the best rates in the market, even when everyone else fails.",
+          "All Products"
+        ]
+      : [
+          "درباره ما",
+          "حرکت به سمت آینده",
+          "PEC East در سال 2001 توسط تیمی از مهندسین باتجربه از جورجیا ، اوکراین و روسیه تأسیس شد. وقتی برای اولین بار به اینجا آمدیم ، ما پتانسیل باورنکردنی صنعت پتروشیمی پارسی را شناختیم و هدفمان را برای کشف کامل آن دانستیم. امروزه ما از نظر کیفیت و قابلیت اطمینان به یکی از بزرگترین مجریان بازار تبدیل شده ایم. با تشکر از وضعیت ویژه ما ، عملیات و محصولات ما از مجازات های بین المللی معاف هستند و مالیات 0٪ دارند ، این بدان معنی است که شما می توانید با ارائه بهترین نرخ ها در بازار به ما اعتماد کنید ، حتی در صورت عدم موفقیت همه افراد.",
+          "همه محصولات"
+        ];
   return (
     <>
       <Wrapper id="ABOUT">
@@ -51,7 +58,9 @@ export const About = () => {
                 <Paragraph className="bgBright">{paragraph}</Paragraph>
               </PaddedContainer>
               <PaddedContainer className="about">
-                <a href="#PRODUCTS" style={{textDecoration: "none"}}><Btn className="bgBright" >{button}</Btn></a>
+                <a href="#PRODUCTS" style={{ textDecoration: "none" }}>
+                  <Btn className="bgBright">{button}</Btn>
+                </a>
               </PaddedContainer>
             </BodySlice>
           </BodyElement>

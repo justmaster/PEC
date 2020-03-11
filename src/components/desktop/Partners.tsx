@@ -11,7 +11,7 @@ import {
   CircularContainer,
   Dash,
   Subheading,
-  Paragraph,
+  Paragraph
 } from "./desktop_styles/Components";
 import { useParams } from "react-router-dom";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
@@ -21,9 +21,6 @@ interface Partner {
   companySite: string;
   logoURL: string;
 }
-
-const dummyParagraph =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
 const partnerList = [
   {
@@ -42,9 +39,9 @@ const partnerList = [
     companySite: "http://www.reotek.com/en/"
   },
   {
-    title: "ZARUBEZHNEFT",
-    logoURL: require("../../assets/05_zarub_400_2.jpg"),
-    companySite: "https://www.zarubezhneft.ru/en/"
+    title: "SARAKHS SPECIAL ECONOMIC ZONE",
+    logoURL: require("../../assets/SSEZ.jpg"),
+    companySite: ""
   },
   {
     title: "ASTAN QUDS RAZAVI",
@@ -56,7 +53,15 @@ const partnerList = [
 export const Partners = () => {
   const { id } = useParams();
   const [heading, paragraph] =
-    id === "en" ? ["PARTNERS", dummyParagraph] : ["شرکای ما", dummyParagraph];
+    id === "en"
+      ? [
+          "PARTNERS",
+          "We're proud to introduce our partners & investors, who work with us towards our mutual goal of innovation & excellence in the Persian petrochemical market."
+        ]
+      : [
+          "شرکای ما",
+          "ما مفتخریم که شرکا و سرمایه گذاران خود را که با ما در جهت هدف متقابل نوآوری و تعالی در بازار پتروشیمی فارس همکاری می کنند ، معرفی کنیم."
+        ];
   return (
     <>
       <Wrapper id="PARTNERS">

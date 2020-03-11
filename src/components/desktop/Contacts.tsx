@@ -29,11 +29,12 @@ const position = {
   lng: 61.067916
 };
 
-const location = "https://www.google.com/maps/place/36%C2%B024'48.6%22N+61%C2%B004'04.5%22E/@36.4134987,61.0328967,13z/data=!4m5!3m4!1s0x0:0x0!8m2!3d36.4134987!4d61.0679156?hl=en"
+const location =
+  "https://www.google.com/maps/place/36%C2%B024'48.6%22N+61%C2%B004'04.5%22E/@36.4134987,61.0328967,13z/data=!4m5!3m4!1s0x0:0x0!8m2!3d36.4134987!4d61.0679156?hl=en";
 
 export const Contacts = () => {
   const { id } = useParams();
-  const heading = id === "en" ? "Contacts" : "با ما تماس بگیرید"
+  const heading = id === "en" ? "Contacts" : "با ما تماس بگیرید";
   return (
     <>
       <Wrapper id="CONTACTS">
@@ -58,7 +59,13 @@ export const Contacts = () => {
                 </PaddedContainer>
               ))}
               <PaddedContainer className="contacts">
-                <a href={location} target="_blank"><Btn className="bgBright">Google Maps</Btn></a>
+                <a
+                  href={location}
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Btn className="bgBright">Google Maps</Btn>
+                </a>
               </PaddedContainer>
             </BodySlice>
           </BodyElement>
