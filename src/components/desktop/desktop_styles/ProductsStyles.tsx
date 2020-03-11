@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
 
 export const Header = styled.header`
   max-width: 100vw;
-  padding: 7em 5em 5em 5em;
+  padding: 5em 5em 5em 5em;
   height: auto;
   display: flex;
   justify-content: flex-start;
